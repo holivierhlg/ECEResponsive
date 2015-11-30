@@ -41,7 +41,7 @@
       <div class="horizontalBar"></div>
 
   	  <section id="vins">
-  	    <article ng-repeat="product in products | maxFilter:filterprice" class="col-lg-4 col-md-6 col-xs-12">
+  	    <article ng-repeat="product in products | maxFilter:filterprice | filter:searchproduct" class="col-lg-4 col-md-6 col-xs-12">
   	      <figure class="row">
   	        <img ng-src="assets/products/{{product.img}}" class="col-lg-3 col-md-2 col-xs-1 no-resize"/>
 
