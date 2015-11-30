@@ -57,10 +57,28 @@ body {
     }
   }
 
-  .horizontalBar {
-    width: 100%;
-    border-top: 1px solid #999;
-    margin-top:30px;
-    margin-bottom: 30px;
+  section {
+    .horizontalBar {
+      width: 100%;
+      border-top: 1px solid #999;
+      margin-top:30px;
+      margin-bottom: 30px;
+    }
+    section {
+
+      article {
+        figure {
+          &.img {
+            &.no-resize{
+              min-height: 150;
+            }
+          }
+        }
+      }
+
+
+    }
   }
+
+
 }

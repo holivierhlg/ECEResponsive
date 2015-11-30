@@ -4,12 +4,6 @@ var vin = angular.module('vin', []);
 
 vin.controller('vinController', function($scope) {
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 4b7857aab03ae3320be9d3ac1901354ab74eeea5
 
 $scope.products = [
 		{

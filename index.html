@@ -33,34 +33,31 @@
       </div>
     </header>
 
-<<<<<<< HEAD
     <content class="row">
-  	  <h1>Vins</h1>
-  	  <div class="resultDescription"></div>
-=======
-    <content>
       <h1>Vins</h1>
       <div class="resultDescription">
         {{ search }} - 0-{{ range }}€ - {{ results }} produits
       </div>
       <div class="horizontalBar"></div>
->>>>>>> 4b7857aab03ae3320be9d3ac1901354ab74eeea5
 
   	  <section id="vins">
   	    <article ng-repeat="product in products" class="col-lg-4 col-md-6 col-xs-12">
-  	      <figure>
-  	        <img ng-src="assets/products/{{product.img}}" />
-						<h1> {{ product.title}} </h1>
-						{{ product.year + '-' }}
-						<span class="label label-default">
-							{{ product.type }}
-						</span>
-					<p>	{{ product.price + '€'}} </p>
-  	        <figcaption >
+  	      <figure class="row">
+  	        <img ng-src="assets/products/{{product.img}}" class="col-lg-3 col-md-2 col-xs-1 no-resize"/>
+
+            <figcaption class="col-lg-9 col-md-9 col-xs-9">
+  						<h2> {{ product.title}} </h2>
+  						{{ product.year + '-' }}
+  						<span class="label label-default">
+  							{{ product.type }}
+  						</span>
+  					  <p>	{{ product.price + '€'}} </p>
+
 
   	        </figcaption>
 
-  	      </figure>
+          </figure>
+
   	    </article>
   	  </section>
 
