@@ -5,10 +5,8 @@
 body {
 
   header {
-    height: 130px;
-    margin-top: -8px;
-    margin-left: 20px;
-    margin-right: 20px;
+    height: 100%;
+    padding-top: 30px;
     background: linear-gradient(#fff, #EFEFEF);
     box-shadow: 0px 0px 10px -5px #000;
 
@@ -16,15 +14,15 @@ body {
     #logo {
       height: 68px;
       width: 90px;
-      margin-top: 25px;
-      margin-left: 130px;
+      //margin-top: 25px;
+      //margin-left: 130px;
       background-image: url('../logo.png');
       background-repeat: no-repeat;
-      float: left;
+      //float: left;
     }
     #filter {
-      padding-left: 270px;
-      padding-top: 25px;
+      //padding-left: 270px;
+      //padding-top: 25px;
         #search {
           .searchBar {
             border:2px solid #E4E4E4;
@@ -64,20 +62,21 @@ body {
       margin-top:30px;
       margin-bottom: 30px;
     }
-    section {
+
 
       article {
         figure {
-          &.img {
+          img {
             &.no-resize{
-              min-height: 150;
+              min-height: 150px;
+              min-width: 80px;
             }
           }
         }
       }
 
 
-    }
+
   }
 
 
