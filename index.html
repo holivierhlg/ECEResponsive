@@ -32,8 +32,11 @@
     </header>
 
     <content>
-  	  <h1>Vins</h1>
-  	  <div class="resultDescription"></div>
+      <h1>Vins</h1>
+      <div class="resultDescription">
+        {{ search }} - 0-{{ range }}€ - {{ results }} produits
+      </div>
+      <div class="horizontalBar"></div>
 
   	  <section id="vins">
   	    <article ng-repeat="product in products">
