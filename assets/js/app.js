@@ -4,6 +4,11 @@ var vin = angular.module('vin', []);
 
 vin.controller('vinController', function($scope) {
 
+$scope.filterprice=50;
+
+$scope.nbproducts=8;
+
+$scope.searchproduct;
 
 $scope.products = [
 		{

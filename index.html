@@ -24,11 +24,11 @@
       <div id="logo"></div>
       <div id="filter">
         <div id="search">
-          <input class="searchBar" id="search" type="search" placeholder="Rechercher un vin">
+          <input class="searchBar" id="search" type="search" placeholder="Rechercher un vin" ng-model="searchproduct">
         </div>
         <div id="filterBar">
           <label for="range" class="filterText">Prix maximum : {{ filterprice }}</label>
-          <input id="range" class="range" type="range" min="0" max="100" value="100" step="1">
+          <input id="range" class="range" type="range" min="0" max="50" value="50" step="1" ng-model="filterprice">
         </div>
       </div>
     </header>
@@ -36,12 +36,12 @@
     <content class="row">
       <h1>Vins</h1>
       <div class="resultDescription">
-        {{ search }} - 0-{{ range }}€ - {{ results }} produits
+        {{ searchproduct }} - 0-{{ filterprice }}€ - {{ nbproducts }} produits
       </div>
       <div class="horizontalBar"></div>
 
   	  <section id="vins">
-  	    <article ng-repeat="product in products" class="col-lg-4 col-md-6 col-xs-12">
+  	    <article ng-repeat="product in products | maxFilter:filterprice" class="col-lg-4 col-md-6 col-xs-12">
   	      <figure class="row">
   	        <img ng-src="assets/products/{{product.img}}" class="col-lg-3 col-md-2 col-xs-1 no-resize"/>
 
