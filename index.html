@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="assets/css/style.css"/>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
+    <script src="assets/js/angular.min.js"></script>
     <script src="assets/js/app.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 
 </head>
-<body>
-  <div class="container-fluid">
+<body ng-app='vin'>
+	<div ng-controller='vinController'>
     <header>
       <div id="logo"></div>
       <div id="filter">
@@ -31,26 +32,23 @@
     </header>
 
     <content>
-      <h1>Vins</h1>
-      <div class="resultDescription">
-        {{ search }} - 0-{{ range }}€ - {{ results }} produits
-      </div>
+  	  <h1>Vins</h1>
+  	  <div class="resultDescription"></div>
 
-      <div class="horizontalBar"></div>
+  	  <section id="vins">
+  	    <article ng-repeat="product in products">
+  	      <figure>
+  	        <img ng-src="assets/products/{{product.img}}" />
 
-      <section id="vins">
-        <article>
-          <figure>
-            <img />
-            <figcaption>
-            </figcaption>
+  	        <figcaption >
+  						{{ product.type }}
+  	        </figcaption>
 
-          </figure>
-        </article>
-      </section>
+  	      </figure>
+  	    </article>
+  	  </section>
 
-    </content>
-  </div>
-</body>
-
+  	</content>
+  	</div>
+  </body>
 </html>
