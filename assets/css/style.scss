@@ -2,41 +2,65 @@
   font-family: 'Roboto';
   src: url("../font/Roboto.ttf");
 }
+body {
 
-header {
-  height: 130px;
-  margin-top: -8px;
-  margin-left: 20px;
-  margin-right: 20px;
-  background: linear-gradient(#fff, #ECECEC);
-  box-shadow: 0px 0px 10px -5px #000;
+  header {
+    height: 130px;
+    margin-top: -8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: linear-gradient(#fff, #EFEFEF);
+    box-shadow: 0px 0px 10px -5px #000;
 
 
-  #logo {
-    height: 68px;
-    width: 90px;
-    margin-top: 25px;
-    margin-left: 130px;
-    background-image: url('../logo.png');
-    background-repeat: no-repeat;
-    float: left;
-  }
-  #filter {
-    padding-left: 270px;
-    padding-top: 40px;
-      #search {
-        .searchBar {
-          box-shadow: 0 0 1px #000;
-          width: 300px;
-          border-radius: 10px;
+    #logo {
+      height: 68px;
+      width: 90px;
+      margin-top: 25px;
+      margin-left: 130px;
+      background-image: url('../logo.png');
+      background-repeat: no-repeat;
+      float: left;
+    }
+    #filter {
+      padding-left: 270px;
+      padding-top: 25px;
+        #search {
+          .searchBar {
+            border:2px solid #E4E4E4;
+            width: 300px;
+            height: 25px;
+            padding-left: 30px;
+            border-radius: 20px;
+            background-image: url("../img/search.png");
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            background-position: 7px 5px;
+          }
         }
-      }
 
-      #filterBar {
-        padding-top: 10px;
-        width: 300px;
+        #filterBar {
+          padding-top: 10px;
+          float: left;
 
-      }
+          .filterText{
+            display:block;
+          }
 
+          .range{
+            width: 300px;
+            display:block;
+
+          }
+        }
+
+    }
+  }
+
+  .horizontalBar {
+    width: 100%;
+    border-top: 1px solid #999;
+    margin-top:30px;
+    margin-bottom: 30px;
   }
 }

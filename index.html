@@ -7,39 +7,50 @@
 		<meta name="keywords" content="Vindiou" />
 		<meta name="description" content="Vindiou" />
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
     <script src="assets/js/app.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-  <header>
-    <div id="logo"></div>
-    <div id="filter">
-      <div id="search">
-        <input class="searchBar" type="search">
+  <div class="container-fluid">
+    <header>
+      <div id="logo"></div>
+      <div id="filter">
+        <div id="search">
+          <input class="searchBar" id="search" type="search" placeholder="Rechercher un vin">
+        </div>
+        <div id="filterBar">
+          <label for="range" class="filterText">Prix maximum : {{ filterprice }}</label>
+          <input id="range" class="range" type="range" min="0" max="100" value="100" step="1">
+        </div>
       </div>
-      <div id="filterBar">
-        <input type="range">
+    </header>
+
+    <content>
+      <h1>Vins</h1>
+      <div class="resultDescription">
+        {{ search }} - 0-{{ range }}€ - {{ results }} produits
       </div>
-    </div>
-  </header>
 
-<content>
-  <h1>Vins</h1>
-  <div class="resultDescription"></div>
+      <div class="horizontalBar"></div>
 
-  <section id="vins">
-    <article>
-      <figure>
-        <img />
-        <figcaption>
-        </figcaption>
+      <section id="vins">
+        <article>
+          <figure>
+            <img />
+            <figcaption>
+            </figcaption>
 
-      </figure>
-    </article>
-  </section>
+          </figure>
+        </article>
+      </section>
 
-</content>
-
+    </content>
+  </div>
 </body>
 
 </html>
