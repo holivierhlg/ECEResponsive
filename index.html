@@ -7,39 +7,45 @@
 		<meta name="keywords" content="Vindiou" />
 		<meta name="description" content="Vindiou" />
     <link rel="stylesheet" href="assets/css/style.css"/>
+		<script src="assets/js/angular.min.js"></script>
     <script src="assets/js/app.js"></script>
 
+
+
 </head>
-<body>
-  <header>
-    <div id="logo"></div>
-    <div id="filter">
-      <div id="search">
-        <input class="searchBar" type="search">
-      </div>
-      <div id="filterBar">
-        <input type="range">
-      </div>
-    </div>
-  </header>
+<body ng-app='vin'>
+	<div ng-controller='vinController'>
+	  <header>
+	    <div id="logo"></div>
+	    <div id="filter">
+	      <div id="search">
+	        <input class="searchBar" type="search">
+	      </div>
+	      <div id="filterBar">
+	        <input type="range">
+	      </div>
+	    </div>
+	  </header>
 
-<content>
-  <h1>Vins</h1>
-  <div class="resultDescription"></div>
+	<content>
+	  <h1>Vins</h1>
+	  <div class="resultDescription"></div>
 
-  <section id="vins">
-    <article>
-      <figure>
-        <img />
-        <figcaption>
-        </figcaption>
+	  <section id="vins">
+	    <article ng-repeat="product in products">
+	      <figure>
+	        <img ng-src="assets/products/{{product.img}}" />
 
-      </figure>
-    </article>
-  </section>
+	        <figcaption >
+						{{ product.type }}
+	        </figcaption>
 
-</content>
+	      </figure>
+	    </article>
+	  </section>
 
+	</content>
+	</div>
 </body>
 
 </html>

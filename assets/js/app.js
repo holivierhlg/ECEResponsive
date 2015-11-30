@@ -1,83 +1,116 @@
-// crée un modul
+// crï¿½e un modul
 
-var pizza = angular.module('pizza', []);
+var vin = angular.module('vin', []);
 
-pizza.controller('pizzaController', function($scope) {
-		
+vin.controller('vinController', function($scope) {
 
-	
-	$scope.showInfos = false ;
-	
-	$scope.types = [
-{
-    name: 'Margherita',
-    description: {
-        body: "Tomate, mozzarella, basilic, huile d'olive",
-        show: false
-    },
-    price: 8
-},
-{
-    name: 'Reine',
-    description: {
-        body: "Mozzarella, champignons, jambon, olives, huile d'olive",
-        show: false
-    },
-    price: 10
-},
-{
-    name: 'Quattro stagioni',
-    description: {
-        body: "Tomate, mozzarella, champignons, artichaut, poivrons, basilic, huile d'olive",
-        show: false
-    },
-    price: 12
-},
-{
-    name: 'Sicilienne',
-    description: {
-        body: "Tomate, mozzarella, basilic, anchois, câpres, champignon",
-        show: false
-    },
-    price: 11
-}
-];
+alert("tot");
 
 
-	$scope.pates = [
-{
-    name: 'Classique',
-    price: 0
-},
-{
-    name: 'Extra fine',
-    price: 2
-},
-{
-    name: 'Epaisse',
-    price: 3
-}
-];
 
+$scope.products = [
+		{
+			title: 'Chateau Vieux Bonneau',
+			price: 12.50,
+			year: 2007,
+			type: "Rouge",
+			img: "vin_1.png",
+			description: {
+				show: false,
+				text: "Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi."
+			}
+		},
+		{
+			title: 'Chateau Jamard Belcour',
+			price: 21.60,
+			year: 2004,
+			type: "Rouge",
+			img: "vin_2.png",
+			description: {
+				show: false,
+				text: "Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi."
+			}
+		},
+		{
+			title: 'Lalande-De-Pomerol',
+			price: 45,
+			year: 2003,
+			type: "Rouge",
+			img: "vin_3.png",
+			description: {
+				show: false,
+				text: "Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi."
+			}
+		},
+		{
+			title: 'Chateau Maurac',
+			price: 32,
+			year: 2004,
+			type: "Rouge",
+			img: "vin_4.png",
+			description: {
+				show: false,
+				text: "Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi."
+			}
+		},
+		{
+			title: 'Chateau La Gorce',
+			price: 18.20,
+			year: 2006,
+			type: "Rouge",
+			img: "vin_5.png",
+			description: {
+				show: false,
+				text: "Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi."
+			}
+		},
+		{
+			title: 'Chateau des Merles',
+			price: 15.50,
+			year: 2007,
+			type: "Rouge",
+			img: "vin_6.png",
+			description: {
+				show: false,
+				text: "Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi."
+			}
+		},
+		{
+			title: 'Chateau Beauregard Ducasse',
+			price: 17,
+			year: 2008,
+			type: "Rouge",
+			img: "vin_7.png",
+			description: {
+				show: false,
+				text: "Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi."
+			}
+		},
+		{
+			title: 'Chateau Beauregard Ducasse',
+			price: 9.40,
+			year: 2011,
+			type: "Blanc",
+			img: "vin_8.png",
+			description: {
+				show: false,
+				text: "Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi."
+			}
+		},
+	];
 
-	$scope.extras = [
-{
-    name: 'Olives',
-    price: 1
-},
-{
-    name: 'Anchois',
-    price: 4
-},
-{
-    name: 'Chèvre',
-    price: 3
-},
-{
-    name: 'Piment',
-    price: 1
-}
-];
 
 });
 
+vin.filter('maxFilter', function() {
+	return function(items, max) {
+			var filtered = [];
+			max = parseInt(max);
+			angular.forEach(items, function(item) {
+					if(item.price <= max) {
+							filtered.push(item);
+					}
+			});
+			return filtered;
+	};
+});
