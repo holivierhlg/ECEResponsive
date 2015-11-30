@@ -4,7 +4,7 @@ var vin = angular.module('vin', []);
 
 vin.controller('vinController', function($scope) {
 
-alert("tot");
+
 
 
 

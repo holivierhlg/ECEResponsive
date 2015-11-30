@@ -17,8 +17,10 @@
 
 </head>
 <body ng-app='vin'>
-	<div ng-controller='vinController'>
+
+	<div ng-controller='vinController' class="container-fluid">
     <header>
+
       <div id="logo"></div>
       <div id="filter">
         <div id="search">
@@ -31,17 +33,22 @@
       </div>
     </header>
 
-    <content>
+    <content class="row">
   	  <h1>Vins</h1>
   	  <div class="resultDescription"></div>
 
   	  <section id="vins">
-  	    <article ng-repeat="product in products">
+  	    <article ng-repeat="product in products" class="col-lg-4 col-md-6 col-xs-12">
   	      <figure>
   	        <img ng-src="assets/products/{{product.img}}" />
-
+						<h1> {{ product.title}} </h1>
+						{{ product.year + '-' }}
+						<span class="label label-default">
+							{{ product.type }}
+						</span>
+					<p>	{{ product.price + '€'}} </p>
   	        <figcaption >
-  						{{ product.type }}
+
   	        </figcaption>
 
   	      </figure>
